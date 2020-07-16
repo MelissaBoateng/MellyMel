@@ -28,6 +28,39 @@ class rectangle: '''An instance of class point '''
         return self.RectLen*self.RectWidth
     def perimeter(self): '''Area class that calculates the perimeter of a given point rectangle'''
         return 2*(self.RectLen+self.RectWidth)
+    
+    def intersects(RectangleA, RectangleB):'''this function checks if rectangles intersect or not'''
+        topRightcornerA=RectangleA.gettopRightcorner()
+        topRightcornerB=RectangleB.gettopRightcorner()
+        topLeftcornerA=RectangleA.gettopLeftcorner()
+        topLeftcornerB=RectangleB.gettopLeftcorner()
+        bottonLeftCornerA=RectangleA.getbottonLeftCorner()
+        bottonLeftCornerB=RectangleB.getbottonLeftCorner()
+        bottonRightCornerA=RectangleA.getbottonRightCorner()
+        c=RectangleB.getbottonRightCorner()
+        
+        
+       '''Now using Rectangle A as base Rectangle on which all other rectangles must intersect if true'''
+    ArrayIntersectA=[False,False,False,False] '''this line of code already assigned a non intersect as false in order to make all other conditions true per the diagram'''
+    for every Rectangle in Intersects:
+        if PointIn(topRightcornerB,RectangleA):
+            ArrayIntersectA[0]=True
+        if PointIn(topLeftcornerB,RectangleA):
+            ArrayIntersectA[1]=True
+        if PointIn( bottonRightCornerB,RecatangleA):
+            ArrayIntersectA[2]=True
+        if PointIn(topLeftcornerB,RectangleA):
+            ArrayIntersectA[3]=True
+        if ArrayIntersectA.count(True)>0 and < 3:
+            print (True)
+            
+            
+       
+          
+            
+        
+        
+        
         
         
         
