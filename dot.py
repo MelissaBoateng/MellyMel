@@ -5,6 +5,6 @@ from random import sample
 import math
 
 def Dotproduct(N,ListA,ListB):
-    Dotproduct=[x*y for x,y in zip(ListA,ListB)] '''the use of zip is to pair each item in a tuple with their corresponding item in the other tuple'''
-    DP= sum(Dotproduct)
+    Dotproduct=[x*y for x,y in zip(ListA,ListB)] '''the use of zip iterator is to pair each item in a tuple with their corresponding item in the other tuple'''
+    DP= sum(Dotproduct) '''After zip returns the list of all multiplied columns, this line of code Sums the returned multiplied columns'''
     print(DP)
