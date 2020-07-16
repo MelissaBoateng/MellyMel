@@ -22,6 +22,8 @@ class rectangle: '''An instance of class point '''
         return Point(self.gettopRightCorner.getXcord(),self.getbottonLeftCorner.getYcord())
     def gettopleftcorner(self):
         return Point(self.gettopRightCorner.getYcord(),self.getbottonLeftCorner.getXcord())
+    def getRectLen(self,Xaxis,Yaxis):
+        Length=math.sqrt((Xaxis**2)+(Yaxis**2))
     def Area(self): '''Area class that calculates the area of a given point rectangle'''
         return self.RectLen*self.RectWidth
     def perimeter(self): '''Area class that calculates the perimeter of a given point rectangle'''
