@@ -1,14 +1,15 @@
+'''Python function that calculates the area and perimeter of a rectangle'''
 from math import *
-class point:
+class point: ''' A class point is a Python tuple object of (Xcord,Ycord) of real numbers as prompted therefore this first class function initializes the point'''
     def __init__(self,Xcord, Ycord):
         self.Xcord= Xcord
         Self.Ycord= Ycord
-    def getXcord(self):
+    def getXcord(self): '''The getXcord function is an accessor method that encapsulates the data (gets data)'''
         return self.Xcord
     def getYcord(self):
         return self.Ycord
-class rectangle:
-    def __init__(self,bottonLeftCorner,topRightcorner):
+class rectangle: '''An instance of class point '''
+    def __init__(self,bottonLeftCorner,topRightcorner): '''A bottonleft corner and topright corner are initialized as instances of the class rectangle'''
         self.bottonLeftCorner= bottonLeftCorner
         self.topRightCorner= topRightCorner
         self.RectLen=self.getRectLen(self.bottonLeftCorner.getXcord(),self.topRightCorner.getXcord())
@@ -21,9 +22,9 @@ class rectangle:
         return Point(self.gettopRightCorner.getXcord(),self.getbottonLeftCorner.getYcord())
     def gettopleftcorner(self):
         return Point(self.gettopRightCorner.getYcord(),self.getbottonLeftCorner.getXcord())
-    def Area(self):
+    def Area(self): '''Area class that calculates the area of a given point rectangle'''
         return self.RectLen*self.RectWidth
-    def perimeter(self):
+    def perimeter(self): '''Area class that calculates the perimeter of a given point rectangle'''
         return 2*(self.RectLen+self.RectWidth)
         
         
