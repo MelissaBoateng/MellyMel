@@ -1,0 +1,56 @@
+from dequeue import*
+
+New=Deque()
+MaxSize= 20
+for i in range (MaxSize//2):
+    NewDeq = random.randint(1,100)
+    New.add_To_Back(NewDeq)
+    
+sequence = random.uniform(0,1)
+print(sequence)
+if sequence > 0 and sequence <= 0.1:
+    Prob = random.randint(1,100)
+    print(Prob)
+    New.add_To_Front(Prob)
+
+elif sequence > 0.1 and sequence <= 0.3:
+    Prob = random.randint(1,100)
+    print(Prob)
+    New.remove_From_Front()
+ 
+  
+elif sequence > 0.4 and sequence <= 1:
+    Prob = random.randint(1,100)
+    print(Prob)
+    New.remove_From_Back()
+    
+    
+#probabilyt table Deque test
+
+if sequence > 0 and sequence <= 0.1:
+    Prob = random.randint(1,100)
+    print(Prob)
+    New.add_To_Front(Prob)
+
+if sequence > 0.1 and sequence <= 0.7:
+    Prob = random.randint(1,100)
+    print(Prob)
+    New.remove_From_Front()
+    
+if sequence > 0.7 and sequence <= 0.8:
+    Prob = random.randint(1,100)
+    print(Prob)
+    New.add_To_Back(Prob)
+    
+if sequence > 0.8 and sequence <= 1:
+    Prob = random.randint(1,100)
+    print(Prob)
+    New.remove_From_Back()
+    
+
+
+print(New.SeqLenght())
+print(New.isEmpty())
+print(New.isFull())
+
+
