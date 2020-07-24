@@ -10,8 +10,8 @@ high= index of value at rear of the array
 
 def InterpolationSearch(arr, target):#the function takes two inputs, array and the number we are looking for
    low = 0 #the lowest value starts at index 0
-    high = (len(arr) - 1) #the highest value is calculated as the lenght of the array-1
-    while low <= high and target >= arr[low] and target<= arr[high]:# while the target is in the sorted array
+   high = (len(arr) - 1) #the highest value is calculated as the lenght of the array-1
+   while low <= high and target >= arr[low] and target<= arr[high]:# while the target is in the sorted array
         index = low + int(((float(high - low) / ( arr[high] - arr[low])) * ( target- arr[low]))) #Formula for finding the index using interpolation by estimating the mid
         if arr[index] == target:# (key value is found)a target is reached when the index of the input array matches with the target number and python goes on to return that index 
             return index
