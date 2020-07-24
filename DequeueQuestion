@@ -5,7 +5,7 @@ class Deque:#hybrid data structure i.e double ended queue
     def isEmpty(self):#sees if the deque is empty or full return true if true and false if otherwise
         return len(self.sequence)==0
     def isFull(self):
-        return len(self.sequence)==20
+        return len(self.sequence)==20 #Maxsize of 20
     def SeqLenght(self):
         if self.sequence == []:
             return "Empty sequence"
@@ -25,3 +25,5 @@ class Deque:#hybrid data structure i.e double ended queue
             raise EmptyDequeError("removeBack: removing from an empty deque:")#removes an item from the back of a sequence raises an error if deque is empty if not, return removed item
         else:
             self.sequence.pop()
+    def showData(self):
+        return self.sequence
