@@ -2,12 +2,16 @@ from dequeue import*
 
 New=Deque()
 MaxSize= 20
-for i in range (MaxSize//2):
+for i in range (MaxSize//2): #initialize the deque as half full
     NewDeq = random.randint(1,100)
     New.add_To_Back(NewDeq)
     
 sequence = random.uniform(0,1)
 print(sequence)
+
+#Then simulate the additions and removals of element by the additions and removal of generated uniform random numbers between 1, 100 
+#according to the probability table shown. Repeat the simulations for the rows of probability values given.
+
 if sequence > 0 and sequence <= 0.1:
     Prob = random.randint(1,100)
     print(Prob)
