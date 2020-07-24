@@ -1,0 +1,27 @@
+import random
+class Deque:#hybrid data structure i.e double ended queue
+    def __init__(self): #initialize a deque data structure  
+        self.sequence=[]
+    def isEmpty(self):#sees if the deque is empty or full return true if true and false if otherwise
+        return len(self.sequence)==0
+    def isFull(self):
+        return len(self.sequence)==20
+    def SeqLenght(self):
+        if self.sequence == []:
+            return "Empty sequence"
+        else:
+            return len(self.sequence)
+    def add_To_Front(self,data):
+        self.sequence.insert(0,data)
+    def add_To_Back(self,data):
+        self.sequence.append(data)
+    def remove_From_Front(self):
+        if self.sequence==[]:
+          raise EmptyDequeError("removeFront: removing from an empty deque:")#removes an item from the back of a sequence raises an error if deque is empty if not, return removed item
+        else:
+          self.sequence.pop(0)
+    def remove_From_Back(self):
+        if self.sequence==[]:
+            raise EmptyDequeError("removeBack: removing from an empty deque:")#removes an item from the back of a sequence raises an error if deque is empty if not, return removed item
+        else:
+            self.sequence.pop()
