@@ -1,3 +1,4 @@
+#the question asked that the dequeue be initialized as half empty. i.e using max array size 20; half would be 10
 from dequeue import*
 
 New=Deque()
@@ -8,6 +9,7 @@ for i in range (MaxSize//2):
     
 sequence = random.uniform(0,1)
 print(sequence)
+#probability table intervals for first row
 if sequence > 0 and sequence <= 0.1:
     Prob = random.randint(1,100)
     print(Prob)
@@ -30,7 +32,7 @@ elif sequence > 0.4 and sequence <= 1:
     New.remove_From_Back()
     
     
-#probability table Deque test lower buttom
+#probability table Deque test lower buttom row
 
 if sequence > 0 and sequence <= 0.1:
     Prob = random.randint(1,100)
@@ -54,9 +56,8 @@ if sequence > 0.8 and sequence <= 1:
     
 
 
-print(New.SeqLenght())
-print(New.isEmpty())
-print(New.isFull())
-print(New.showData())
-
+print("the lenght of dequeue is: ",New.SeqLenght())
+print("an empty deque: ",New.isEmpty())
+print("the content of the array is: ",New.showData())
+#the dequeue is either empty or full and this test was done using the probabilty table that was given
 
